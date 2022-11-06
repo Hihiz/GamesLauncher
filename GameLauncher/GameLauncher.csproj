@@ -8,11 +8,71 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="View\Resources\Icons\Close.png" />
+    <None Remove="View\Resources\Icons\codbo4.png" />
+    <None Remove="View\Resources\Icons\codmw.png" />
+    <None Remove="View\Resources\Icons\codmw2.png" />
+    <None Remove="View\Resources\Icons\diablo.png" />
+    <None Remove="View\Resources\Icons\hots.png" />
+    <None Remove="View\Resources\Icons\hs.png" />
+    <None Remove="View\Resources\Icons\Open.png" />
+    <None Remove="View\Resources\Icons\overwatch.png" />
+    <None Remove="View\Resources\Icons\sc.png" />
+    <None Remove="View\Resources\Icons\sc2.png" />
+    <None Remove="View\Resources\Icons\warcraaft3.png" />
+    <None Remove="View\Resources\Icons\WOW.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Resources\Icons\Close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Icons\codbo4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Icons\codmw.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Icons\codmw2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Icons\diablo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Icons\hots.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="ViewModel\" />
-    <Folder Include="View\Resources\Icons\" />
     <Folder Include="View\Resources\TopBackground\" />
     <Folder Include="View\Resources\Background\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Resources\Icons\hs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Icons\Open.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Icons\overwatch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Icons\sc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Icons\sc2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Icons\warcraaft3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Icons\WOW.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
