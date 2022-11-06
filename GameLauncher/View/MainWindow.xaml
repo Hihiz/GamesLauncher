@@ -27,12 +27,14 @@
                                         <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=Button}" Value="True">
                                             <Setter Property="Foreground" Value="White"/>
                                         </DataTrigger>
+
+                                        <!--На нажатие-->
                                         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}},
                                             Path=IsPressed}" Value="True">
                                             <Setter Property="Foreground" Value="#FF9D9999"/>
                                         </DataTrigger>
 
-                                        <!--На нажатие-->
+                                        <!--Наведение-->
                                         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}},
                                             Path=IsFocused}" Value="True">
                                             <Setter Property="Foreground" Value="White"/>
@@ -42,6 +44,35 @@
                                 </Style>
                             </Label.Style>
                         </Label>
+                        
+                        <!--Эффект размытия-->
+                        <Label Content="{TemplateBinding Content}"
+                        Background="Transparent" Margin="3, 0, 0, 0"
+                           VerticalAlignment="Center" FontSize="23" FontWeight="Bold">
+                            <Label.Style>
+                                <Style TargetType="Label">
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="Visibility" Value="Hidden"/>
+
+       
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}},
+                                            Path=IsFocused}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Effect">
+                                                    <Setter.Value>
+                                                        <BlurEffect Radius="25"/>
+                                                    </Setter.Value>
+                                                </Setter>
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                                                       
+                                </Style>
+                            </Label.Style>
+                        </Label>
+
                     </Grid>
                     <Border.Style>
                         <Style TargetType="Border">
