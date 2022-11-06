@@ -43,6 +43,17 @@
                             </Label.Style>
                         </Label>
                     </Grid>
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Style.Triggers>
+                                <!--Прожатие кнопки-->
+                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}},
+                                            Path=IsPressed}" Value="True">
+                                    <Setter Property="Margin" Value="0, 2, 0, 0"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
                 </Border>
             </Grid>
         </ControlTemplate>
