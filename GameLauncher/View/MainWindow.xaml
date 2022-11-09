@@ -1,15 +1,23 @@
-﻿<Window x:Class="GameLauncher.MainWindow"
+﻿<Window x:Class="GameLauncher.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameLauncher"
+        
+        xmlns:vm="clr-namespace:GameLauncher.ViewModel"
+        
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1000"
         ResizeMode="NoResize"
         Background="#FF110203"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None">
+
+    <!--Подключение страниц-->
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
 
     <!--Style-->
     <Window.Resources>
@@ -189,6 +197,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        <!--Отображение страниц-->
+        <Frame x:Name="mainFrame" Grid.ColumnSpan="10" Grid.RowSpan="10" NavigationUIVisibility="Hidden" Content="{Binding CurPage}"/>
+
         <Grid x:Name="TopMenu" Grid.Row="0" Grid.ColumnSpan="2">
             <Border BorderThickness="1" BorderBrush="#FF303031" Background="Transparent">
                 <StackPanel Orientation="Horizontal">
@@ -221,7 +232,7 @@
 
                 <!--Иконки на кнопки-->
                 <Button Template="{StaticResource ResourceKey=SlideMenuButton}"
-                        Content="World Of Warcraft">
+                        Content="World Of Warcraft" Click="WowPage_Click" >
                     <!--Ресурсы кнопки-->
                     <Button.Resources>
                         <ImageSource x:Key="Img">\View\Resources\Icons\WOW.PNG</ImageSource>
@@ -229,7 +240,7 @@
                 </Button>
 
                 <Button Template="{StaticResource ResourceKey=SlideMenuButton}"
-                        Content="Hearthstone">
+                        Content="Hearthstone" Click="HSPage_Click">
                     <!--Ресурсы кнопки-->
                     <Button.Resources>
                         <ImageSource x:Key="Img">\View\Resources\Icons\hs.png</ImageSource>
@@ -237,7 +248,7 @@
                 </Button>
 
                 <Button Template="{StaticResource ResourceKey=SlideMenuButton}"
-                        Content="Overwatch">
+                         Content="Overwatch" Click="OWPage_Click">
                     <!--Ресурсы кнопки-->
                     <Button.Resources>
                         <ImageSource x:Key="Img">\View\Resources\Icons\overwatch.png</ImageSource>
@@ -245,7 +256,7 @@
                 </Button>
 
                 <Button Template="{StaticResource ResourceKey=SlideMenuButton}"
-                        Content="Warcraft III">
+                        Content="Warcraft III" Click="W3Page_Click">
                     <!--Ресурсы кнопки-->
                     <Button.Resources>
                         <ImageSource x:Key="Img">\View\Resources\Icons\warcraaft3.png</ImageSource>
@@ -253,7 +264,7 @@
                 </Button>
 
                 <Button Template="{StaticResource ResourceKey=SlideMenuButton}"
-                        Content="Diablo III">
+                        Content="Diablo III" Click="D3Page_Click">
                     <!--Ресурсы кнопки-->
                     <Button.Resources>
                         <ImageSource x:Key="Img">\View\Resources\Icons\diablo.png</ImageSource>
@@ -261,7 +272,7 @@
                 </Button>
 
                 <Button Template="{StaticResource ResourceKey=SlideMenuButton}"
-                        Content="Heroes of the Storm">
+                        Content="Heroes of the Storm" Click="HOTSPage_Click">
                     <!--Ресурсы кнопки-->
                     <Button.Resources>
                         <ImageSource x:Key="Img">\View\Resources\Icons\hots.png</ImageSource>
@@ -269,7 +280,7 @@
                 </Button>
 
                 <Button Template="{StaticResource ResourceKey=SlideMenuButton}"
-                        Content="StarCraft II">
+                        Content="StarCraft II" Click="SC2Page_Click">
                     <!--Ресурсы кнопки-->
                     <Button.Resources>
                         <ImageSource x:Key="Img">\View\Resources\Icons\sc2.png</ImageSource>
@@ -277,7 +288,7 @@
                 </Button>
 
                 <Button Template="{StaticResource ResourceKey=SlideMenuButton}"
-                        Content="StarCraft">
+                        Content="StarCraft" Click="SCPage_Click">
                     <!--Ресурсы кнопки-->
                     <Button.Resources>
                         <ImageSource x:Key="Img">\View\Resources\Icons\sc.png</ImageSource>

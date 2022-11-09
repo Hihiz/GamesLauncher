@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace GameLauncher.ViewModel
 {
-    internal abstract class ViewModelBase : INotifyPropertyChanged
+    internal abstract class ViewModedBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -11,15 +11,11 @@ namespace GameLauncher.ViewModel
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
         }
-
-        protected virtual void Set<T>(ref T field, T value, [CallerMemberName] string PropertyName = null)
+        protected virtual bool Set<T>(ref T field, T value, [CallerMemberName] string PropertyName = null)
         {
-            if (Equals(field, value))
-                return false;
-
+            if (Equals(field, value)) return false;
             field = value;
             onPropertyChanged(PropertyName);
-
             return true;
         }
     }

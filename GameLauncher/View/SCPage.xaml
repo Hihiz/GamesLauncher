@@ -14,7 +14,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="Fill"
+        <Image Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="Fill"
                Source="Resources/TopBackground/TopSC.png"/>
 
         <Image Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="Fill" 

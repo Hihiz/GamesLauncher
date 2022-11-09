@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="View\Resources\Background\MainDIABLO.png" />
+    <None Remove="View\Resources\Background\MainHOTS.png" />
+    <None Remove="View\Resources\Background\MainHS.png" />
+    <None Remove="View\Resources\Background\MainOW.png" />
+    <None Remove="View\Resources\Background\MainSC.png" />
+    <None Remove="View\Resources\Background\MainSC2.png" />
+    <None Remove="View\Resources\Background\MainW3.png" />
+    <None Remove="View\Resources\Background\MainWOW.png" />
     <None Remove="View\Resources\Icons\Close.png" />
     <None Remove="View\Resources\Icons\codbo4.png" />
     <None Remove="View\Resources\Icons\codmw.png" />
@@ -21,6 +29,53 @@
     <None Remove="View\Resources\Icons\sc2.png" />
     <None Remove="View\Resources\Icons\warcraaft3.png" />
     <None Remove="View\Resources\Icons\WOW.PNG" />
+    <None Remove="View\Resources\TopBackground\TopDIABLO.png" />
+    <None Remove="View\Resources\TopBackground\TopHOTS.png" />
+    <None Remove="View\Resources\TopBackground\TopHS.png" />
+    <None Remove="View\Resources\TopBackground\TopOW.png" />
+    <None Remove="View\Resources\TopBackground\TopSC.png" />
+    <None Remove="View\Resources\TopBackground\TopSC2.png" />
+    <None Remove="View\Resources\TopBackground\TopW3.png" />
+    <None Remove="View\Resources\TopBackground\TopWOW.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Resources\TopBackground\TopOW.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Resources\TopBackground\TopHOTS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Resources\Background\MainDIABLO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Background\MainHOTS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Background\MainHS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Background\MainOW.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Background\MainSC.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Background\MainSC2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Background\MainW3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Background\MainWOW.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -46,7 +101,10 @@
 
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -69,6 +127,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="View\Resources\Icons\WOW.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\TopBackground\TopDIABLO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\TopBackground\TopHS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\TopBackground\TopSC.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\TopBackground\TopSC2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\TopBackground\TopW3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\TopBackground\TopWOW.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
