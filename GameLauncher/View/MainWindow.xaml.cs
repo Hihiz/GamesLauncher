@@ -1,5 +1,6 @@
 ﻿using GameLauncher.View.Resources;
 using System.Windows;
+using System.Windows.Input;
 
 namespace GameLauncher.View
 {
@@ -51,6 +52,15 @@ namespace GameLauncher.View
         private void SCPage_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(new SCPage());
+        }
+
+        // Премещение окна
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
         }
     }
 }
