@@ -253,7 +253,7 @@
                 </Button>
 
                 <Button Template="{StaticResource ResourceKey=SlideMenuButton}"
-                        Content="Diablo">
+                        Content="Diablo III">
                     <!--Ресурсы кнопки-->
                     <Button.Resources>
                         <ImageSource x:Key="Img">\View\Resources\Icons\diablo.png</ImageSource>
