@@ -201,7 +201,7 @@
         <Frame x:Name="mainFrame" Grid.ColumnSpan="10" Grid.RowSpan="10" NavigationUIVisibility="Hidden" Content="{Binding CurPage}"/>
 
         <Grid x:Name="TopMenu" Grid.Row="0" Grid.ColumnSpan="2">
-            <Border BorderThickness="1" BorderBrush="#FF303031" Background="Transparent">
+            <Border BorderThickness="1" BorderBrush="#FF303031" Background="Transparent" MouseDown="Border_MouseDown">
                 <StackPanel Orientation="Horizontal">
                     <Button Template="{StaticResource ResourceKey=TopMenuButtons}" Content="ИГРЫ"/>
                     <Button Template="{StaticResource ResourceKey=TopMenuButtons}" Content="ОБЩЕНИЕ"/>
